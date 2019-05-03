@@ -3,14 +3,14 @@ import {View,Text} from 'react-native';
 
 export default class Description extends Component
 {
-    static navigationOptions={
-        title:"درباره ما",
-    };
+    static navigationOptions=({navigation})=>({title:navigation.state.params.cdata.title});
+
     render()
     {
+        const {text,body} = this.props.navigation.state.params.cdata;
         return(
             <View>
-                <Text>ali karimi</Text>
+                <Text>{text+body}</Text>
             </View>
         )
     }

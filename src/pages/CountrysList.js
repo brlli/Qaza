@@ -1,17 +1,18 @@
 import React , {Component} from 'react';
-import {View,Text} from 'react-native';
-
+import {View,Text,Image} from 'react-native';
+import Form from './../components/Form';
 export default class CountryList extends Component
 {
     static navigationOptions={
-        title:"لیست کشور ها",
-        backgroundColor:'red',
+        title:"لیست کشور ها"
     };
     render()
     {
+        const {navigate} = this.props.navigation;
         return(
             <View >
-                <Text>ali karimi</Text>
+
+                <Form navigation={this.props.navigation} />
             </View>
         )
     }
