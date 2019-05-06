@@ -1,10 +1,11 @@
 import React , {Component} from 'react';
-import {View,Text,Image} from 'react-native';
-import Form from './../components/Form';
+import {ScrollView} from 'react-native';
+import Form from '../components/Form';
 export default class CountryList extends Component
 {
     static navigationOptions={
-        title:"لیست کشور ها"
+        title:"لیست کشور ها",
+        headerStyle:{backgroundColor:'rgb(198, 247, 165)'},
     };
 
     constructor(props) {
@@ -28,13 +29,13 @@ export default class CountryList extends Component
     {
 
         return(
-            <View >
+            <ScrollView style={{backgroundColor:'#046e42'}} >
                 {
                     Object.keys(this.result).map(
                     (x)=>(<Form key={x} result={this.result[x]} C={this.Click} />
                     ))
                 }
-            </View>
+            </ScrollView>
         )
     }
 }

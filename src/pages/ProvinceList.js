@@ -1,10 +1,11 @@
 import React , {Component} from 'react';
-import {View} from 'react-native';
-import Form from './../components/Form';
+import {ScrollView} from 'react-native';
+import Form from '../components/Form';
 export default class ProvinceList extends Component
 {
     static navigationOptions={
-        title:"لیست استان ها"
+        title:"لیست استان ها",
+        headerStyle:{backgroundColor:'rgb(198, 247, 165)'},
     };
     constructor(props) {
         super(props);
@@ -23,13 +24,13 @@ export default class ProvinceList extends Component
     render()
     {
         return(
-            <View >
+            <ScrollView style={{backgroundColor:'#046e42'}}>
                 {
                     Object.keys(this.result).map((x)=>
                             (<Form key={x} result={this.result[x]} C={this.Click} />)
                     )
                 }
-            </View>
+            </ScrollView>
         )
     }
 }

@@ -6,6 +6,7 @@ export default class MainMenu extends Component
 {
     static navigationOptions={
         title:"صفحه اصلی",
+        headerStyle:{backgroundColor:'rgb(198, 247, 165)'}
     };
     constructor(){
         super();

@@ -20,8 +20,9 @@ const MainStyle = StyleSheet.create({
 
     },
     textbutton:{
-      fontSize:18,
-      fontWeight: 'bold',
+        fontFamily:"B-nazannin",
+        fontSize:18,
+        fontWeight: 'bold',
     },
 });
 export default  MainStyle;
