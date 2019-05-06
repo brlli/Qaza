@@ -1,38 +1,33 @@
 import React , {Component} from 'react';
-import {View,Text,Image} from 'react-native';
+import {View} from 'react-native';
 import Form from './../components/Form';
-export default class CountryList extends Component
+export default class ProvinceList extends Component
 {
     static navigationOptions={
-        title:"لیست کشور ها"
+        title:"لیست استان ها"
     };
-
     constructor(props) {
         super(props);
         this.Click = this.Click.bind(this);
         this.result  = props.navigation.state.params.result;
+        this.state ={List:Object.keys(this.result)};
     }
     Click(result)
     {
         const {navigate} = this.props.navigation;
-
-        if(result.State)
-            navigate("ProvinceList", {result: result.Provinces});
-
-        else
             navigate("Description",{result:result});
 
     }
 
+
     render()
     {
-
         return(
             <View >
                 {
-                    Object.keys(this.result).map(
-                    (x)=>(<Form key={x} result={this.result[x]} C={this.Click} />
-                    ))
+                    Object.keys(this.result).map((x)=>
+                            (<Form key={x} result={this.result[x]} C={this.Click} />)
+                    )
                 }
             </View>
         )

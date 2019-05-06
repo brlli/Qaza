@@ -7,6 +7,11 @@ export default class MainMenu extends Component
     static navigationOptions={
         title:"صفحه اصلی",
     };
+    constructor(){
+        super();
+        let json = require("./../data/Countrys.json");
+        this.result = json;
+    }
 
 
     render()
@@ -15,8 +20,8 @@ export default class MainMenu extends Component
         return(
             <View style={MainStyle.main}>
                 <TouchableHighlight style={[{marginTop:'50%'},MainStyle.mainbutton]} underlayColor={"#33cccc"}
-                                    onPress={()=>navigate('CountryList')} >
-                    <Text style={MainStyle.textbutton} >غذا ها</Text>
+                                    onPress={()=>navigate('CountryList',{result:this.result})} >
+                    <Text style={MainStyle.textbutton} >ورود به برنامه</Text>
                 </TouchableHighlight>
                 <TouchableHighlight style={[{marginTop:'10%'},MainStyle.mainbutton]} underlayColor={"#33cccc"}
                                     onPress={()=>navigate('AboutUs')} >

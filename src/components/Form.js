@@ -5,12 +5,12 @@ import {Text,View,Image,TouchableNativeFeedback,StyleSheet} from 'react-native';
 export default class Form extends Component
 {
 render() {
-    const {navigate} = this.props.navigation;
+    const {C,result} = this.props;
     return(
-        <TouchableNativeFeedback onPress={()=>{navigate('Description',{cdata:{text:"سیبسبسیبسیب\nبسیبسیبسیبسیبسیسب\n",title:"ایران",body:"dfdfsdfdfdsf"}})}} >
+        <TouchableNativeFeedback onPress={()=>{C(result);}} >
         <View style={style.button}>
             <Image source={require('./../img/Iran.png')} style={style.image}/>
-            <Text>ایران</Text>
+            <Text>{result.Name}</Text>
         </View>
         </TouchableNativeFeedback>
     )
