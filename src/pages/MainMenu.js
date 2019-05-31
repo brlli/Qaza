@@ -1,12 +1,14 @@
 import React , {Component} from 'react';
-import {View,Text,TouchableHighlight} from 'react-native';
+import {View,Text,TouchableHighlight,ImageBackground} from 'react-native';
 import MainStyle from '../assets/css/MainMenu.css';
+import Image from '../components/image';
 
 export default class MainMenu extends Component
 {
     static navigationOptions={
         title:"صفحه اصلی",
-        headerStyle:{backgroundColor:'rgb(198, 247, 165)'}
+        headerTitleStyle:{fontFamily:"yekan",textAlign: 'center',alignSelf:'center',fontWeight: 'normal'},
+        headerStyle:{backgroundColor:'rgba(102, 102, 153,.3)',textAlign: 'center'},
     };
     constructor(){
         super();
@@ -19,6 +21,7 @@ export default class MainMenu extends Component
     {
         const {navigate} = this.props.navigation;
         return(
+            <ImageBackground source={Image.country} style={{width:'100%',height:'100%'}}>
             <View style={MainStyle.main}>
                 <TouchableHighlight style={[{marginTop:'50%'},MainStyle.mainbutton]} underlayColor={"#33cccc"}
                                     onPress={()=>navigate('CountryList',{result:this.result})} >
@@ -26,10 +29,11 @@ export default class MainMenu extends Component
                 </TouchableHighlight>
                 <TouchableHighlight style={[{marginTop:'10%'},MainStyle.mainbutton]} underlayColor={"#33cccc"}
                                     onPress={()=>navigate('AboutUs')} >
-                    <Text style={MainStyle.textbutton}>درباره ما</Text>
+                    <Text style={MainStyle.textbutton}>نویسندگان</Text>
                 </TouchableHighlight>
 
             </View>
+            </ImageBackground>
         )
     }
 }

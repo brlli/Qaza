@@ -2,37 +2,37 @@ import {StyleSheet} from 'react-native';
 
  const Description = StyleSheet.create(
     {
-            main:
-                {
-                backgroundColor:'#046e42',
-                    padding:10,
+              main:{
+                  backgroundColor: 'rgba(102, 153, 153,0.1)',
+              },
 
-            },
               FoodName:{
-                  fontWeight: 'bold',
                   fontSize:24,
                   color:"black",
-                  fontFamily:"B-nazannin"
+                  fontFamily:"yekan",
+                  marginLeft:10,
+                  marginTop:10
               },
              Title:{
                   fontSize: 20,
                   color:"black",
-                 fontFamily: "B-nazannin",
-                 fontWeight: 'bold',
+                 fontFamily: "yekan",
                  marginTop: 10,
                  marginBottom: 15,
+                 marginLeft:10,
                 },
             Material:{
                 fontSize: 20,
                 color:"black",
-                fontFamily: "B-nazannin",
+                fontFamily: "yekan",
+                marginLeft:15,
                 },
 
             Ingredients:
                 {
                     marginTop:15,
                     marginBottom: 10,
-                    textAlign: 'justify',
+                    textAlign: 'left',
                 },
             Prepared:
                 {
@@ -42,10 +42,20 @@ import {StyleSheet} from 'react-native';
                 },
             PreparedText:
                 {
-                    fontFamily: "B-nazannin",
+                    fontFamily: "yekan",
                     color:"black",
-                    fontSize:20,
-                }
+                    fontSize:18,
+                    textAlign: 'right',
+                    paddingRight:10,
+                    paddingLeft:10,
+                    lineHeight:25
+
+                },
+        background: {
+                width:'100%',
+            height:'100%',
+
+        }
     }
 );
  export default Description;

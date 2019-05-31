@@ -7,7 +7,7 @@ export default class Form extends Component
 render() {
     const {C,result} = this.props;
     return(
-        <TouchableNativeFeedback  onPress={()=>{C(result);}} >
+        <TouchableNativeFeedback  onPress={()=>{C(result);}} style={style.body} >
         <View style={style.button}>
             <Image source={image[result.Image]} style={style.image}/>
             <Text style={style.buttonText}>{result.Name}</Text>
@@ -21,22 +21,31 @@ const  style = StyleSheet.create({
 
        flexDirection:'row',
        flexWrap:'wrap',
-       backgroundColor:'rgba(255, 216, 145,0.8)'
+       backgroundColor:'rgba(128, 128, 128,0.35)',
+       marginTop:5,
+       borderRadius: 10,
+       fontFamily: "yekan",
 
    },
     image:{
         marginRight:40,
         width: 100,
         height: 100,
+        borderRadius:15,
+
 
     },
     buttonText: {
-       textAlign: 'center',
+       textAlign: 'right',
         fontSize:20,
-        fontWeight: 'bold',
-        fontFamily: 'B-nazannin',
-        marginTop:30
+        fontFamily: "yekan",
+        marginTop:30,
+        marginLeft:20,
 
+
+    },
+    body:{
+       marginTop: 10,
     }
 
 });
