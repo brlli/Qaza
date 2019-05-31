@@ -80,7 +80,6 @@ const Image={
     Sushi:require('./../img/Sushi.jpg'),
     SouthKorea:require('./../img/SouthKorea.jpg'),
     Kimchi:require('./../img/Kimchi.jpg'),
-    food:require('./../img/fo.jpg'),
     country:require('./../img/co.jpg'),
     isfahan:require('./../img/isfahan.jpg'),
     beryani:require('./../img/beryani.jpg'),

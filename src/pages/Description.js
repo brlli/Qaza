@@ -15,7 +15,7 @@ export default class Description extends Component
         const {FoodImage,Ingredients,NameFood,Prepared} = this.props.navigation.state.params.result;
 
         return(
-            <ImageBackground source={image.food} style={styles.background}>
+            <ImageBackground source={{uri:"https://s3.farvardin.net/clbu/public/52/28/78aa19a3391b8ed682a96c50f94606afa260.jpg"}} style={styles.background}>
                 <ScrollView style={styles.main}>
 
                         <Image source={image[FoodImage]} style={{width:"100%",height:300}} />
