@@ -13,7 +13,7 @@ export default class AboutUs extends Component
             <View style={{backgroundColor: 'rgb(163, 195, 247)',height:'100%'}}>
                 <Text
                 style={{marginTop:100,textAlign: 'center',fontSize:24}}>علی کریمی</Text>
-                <Text style={{marginTop:100,textAlign: 'center',fontSize:24}} >مهدی ابراهیمی</Text>
+
             </View>
         )
     }
